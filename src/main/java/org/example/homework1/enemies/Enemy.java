@@ -1,6 +1,8 @@
 package org.example.homework1.enemies;
 
-public class Enemy {
+import org.example.homework1.Mortal;
+
+public class Enemy implements Mortal {
 
     private int health;
 
@@ -18,5 +20,10 @@ public class Enemy {
 
     public void takeDamage(int damage) {
         health -= damage;
+    }
+
+    @Override
+    public Boolean isAlive() {
+        return health > 0;
     }
 }

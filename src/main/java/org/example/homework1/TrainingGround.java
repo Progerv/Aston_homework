@@ -22,6 +22,8 @@ public class TrainingGround {
         warrior.attackEnemy(enemy);
         //Health enemy's - 64
 
-        System.out.printf("Enemy health: %s", enemy.getHealth());
+        System.out.printf("Enemy health: %s\n", enemy.getHealth());
+
+        System.out.println("Enemy" + (enemy.isAlive() ? " alive" : " dead"));
     }
 }
