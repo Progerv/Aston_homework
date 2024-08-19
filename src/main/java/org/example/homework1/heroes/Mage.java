@@ -1,6 +1,7 @@
 package org.example.homework1.heroes;
 
 import org.example.homework1.Hero;
+import org.example.homework1.enemies.Enemy;
 
 public class Mage extends Hero {
     public Mage(String name) {
@@ -8,7 +9,9 @@ public class Mage extends Hero {
     }
 
     @Override
-    public void attackEnemy() {
+    public void attackEnemy(Enemy enemy) {
         System.out.println("Mage attacks the enemy");
+
+        enemy.takeDamage(10);
     }
 }
