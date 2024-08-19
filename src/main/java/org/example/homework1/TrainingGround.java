@@ -10,10 +10,6 @@ public class TrainingGround {
 
         Enemy enemy = new Enemy(100);
 
-        Hero hero = new Hero("Valor");
-        //Health enemy's - 100
-        hero.attackEnemy(enemy);
-
         Archer archer = new Archer("Archer");
         archer.attackEnemy(enemy);
         //Health enemy's - 86

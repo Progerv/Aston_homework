@@ -1,6 +1,5 @@
 package org.example.homework1.heroes;
 
-import org.example.homework1.Hero;
 import org.example.homework1.enemies.Enemy;
 
 public class Warrior extends Hero {

@@ -1,8 +1,8 @@
-package org.example.homework1;
+package org.example.homework1.heroes;
 
 import org.example.homework1.enemies.Enemy;
 
-public class Hero {
+public abstract class Hero {
     private String name;
 
     public Hero(String name) {
@@ -13,8 +13,6 @@ public class Hero {
         return name;
     }
 
-    public void attackEnemy(Enemy enemy) {
-        System.out.println("Hero attacks the enemy");
-        enemy.takeDamage(0);
-    }
+    public abstract void attackEnemy(Enemy enemy);
+
 }
