@@ -7,9 +7,13 @@ public class Warrior extends Hero {
         super(name);
     }
 
+    public Warrior(String name, int health, int baseDamage) {
+        super(name, health, baseDamage);
+    }
+
     @Override
     public void attackEnemy(Enemy enemy) {
         System.out.println("Warrior attacks the enemy");
-        enemy.takeDamage(12);
+        enemy.takeDamage(getBaseDamage());
     }
 }

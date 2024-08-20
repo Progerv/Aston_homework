@@ -1,13 +1,21 @@
 package org.example.homework1.enemies;
 
 import org.example.homework1.Mortal;
+import org.example.homework1.heroes.Hero;
 
-public class Enemy implements Mortal {
+public abstract class Enemy implements Mortal {
 
     private int health;
 
-    public Enemy(int health) {
+    public int getBaseDamage() {
+        return baseDamage;
+    }
+
+    private int baseDamage;
+
+    public Enemy(int health, int baseDamage) {
         this.health = health;
+        this.baseDamage = baseDamage;
     }
 
     public int getHealth() {
@@ -26,4 +34,6 @@ public class Enemy implements Mortal {
     public Boolean isAlive() {
         return health > 0;
     }
+
+    public abstract void attackHero(Hero hero);
 }

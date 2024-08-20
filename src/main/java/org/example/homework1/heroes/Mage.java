@@ -7,10 +7,13 @@ public class Mage extends Hero {
         super(name);
     }
 
+    public Mage(String name, int health, int baseDamage) {
+        super(name, health, baseDamage);
+    }
+
     @Override
     public void attackEnemy(Enemy enemy) {
         System.out.println("Mage attacks the enemy");
-
-        enemy.takeDamage(10);
+        enemy.takeDamage(getBaseDamage());
     }
 }
